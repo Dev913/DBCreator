@@ -1,7 +1,11 @@
 <p style="text-align: center" align="center">
+  
   # DBCreator
+  
   This application is for independent investigations/investigators.
-
+</p>
+<p align="center">  
+  
   # DONATE :two_hearts:
   | Bitcoin |
   |---|
