@@ -28,3 +28,8 @@ This application is for independent investigations/investigators.
     <p align="center">
   rsiEk63fN1GGn9ngKSAA2NGNjCcgq1sm8q
 </p>
+<p align="center"><b>Paxful Affiliate QR Code</b>
+  <div>
+    <p align="center">
+<img width="100px" height="100px" src="https://paxful.com/qr/r/E1kaeX8e3kn" />
+</div>
