@@ -1,10 +1,7 @@
 ﻿using DBC.Properties;
 using System;
-using System.Deployment.Application;
+using System.Drawing;
 using System.IO;
-using System.Reflection;
-using System.Security.AccessControl;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace DBC
@@ -584,7 +581,9 @@ namespace DBC
 
         private void databaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This section will be available soon.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("This section will be available soon.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form3 form3 = new Form3();
+            form3.Show();
         }
 
         private void updatesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -607,6 +606,26 @@ namespace DBC
                     return;
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(Width, Height);
+            System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap);
+            var empty = System.Drawing.Point.Empty;
+            g.CopyFromScreen(new System.Drawing.Point(Bounds.Left, Bounds.Top), empty, Bounds.Size);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Image (*.PNG) | *.png";
+            saveFileDialog.ShowDialog();
+            bitmap.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Picture of POI (Person Of Interest";
+            openFileDialog.ShowDialog();
+            pictureBox1.Image = new Bitmap(openFileDialog.FileName);
         }
     }
 }
